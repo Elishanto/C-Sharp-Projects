@@ -66,6 +66,17 @@ namespace calculator
         {
             num("0");
         }
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Length > 0)
+            {
+                textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 1);
+            }
+            else
+            {
+
+            }
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -104,7 +115,7 @@ namespace calculator
             choice = 4;
         }
         String result;
-        private void equals_Click(object sender, EventArgs e)
+        private async void equals_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != null && textBox1.Text != "")
             {
@@ -134,9 +145,17 @@ namespace calculator
                 result = Convert.ToString(a - b);
                 textBox1.Text = result;
             }
+            else if (textBox1.Text == "7355608")
+            {
+                pictureBox1.Enabled = true;
+                pictureBox1.Visible = true;
+                await Task.Delay(3000);
+                pictureBox1.Enabled = false;
+                pictureBox1.Visible = false;
+            }
             else
             {
-
+                
             }
         }
         private void num(String a)

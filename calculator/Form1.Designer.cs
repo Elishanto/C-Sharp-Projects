@@ -44,6 +44,9 @@
             this.min = new System.Windows.Forms.Button();
             this.plus = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -223,11 +226,36 @@
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
+            // button11
+            // 
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button11.Location = new System.Drawing.Point(158, 171);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(30, 30);
+            this.button11.TabIndex = 19;
+            this.button11.Text = "C";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Enabled = false;
+            this.pictureBox1.Image = global::calculator.Properties.Resources.tumblr_ndms51tLbO1qdm5ngo1_400;
+            this.pictureBox1.Location = new System.Drawing.Point(1, 50);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(283, 199);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.min);
             this.Controls.Add(this.plus);
@@ -247,6 +275,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,6 +299,8 @@
         private System.Windows.Forms.Button min;
         private System.Windows.Forms.Button plus;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button11;
     }
 }
 
