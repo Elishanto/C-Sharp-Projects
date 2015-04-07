@@ -239,6 +239,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.No;
             this.pictureBox1.Enabled = false;
             this.pictureBox1.Image = global::calculator.Properties.Resources.tumblr_ndms51tLbO1qdm5ngo1_400;
             this.pictureBox1.Location = new System.Drawing.Point(1, 50);
@@ -274,7 +275,7 @@
             this.Controls.Add(this.button1);
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Калькулятор";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

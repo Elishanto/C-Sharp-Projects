@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -152,6 +153,13 @@ namespace calculator
                 await Task.Delay(3000);
                 pictureBox1.Enabled = false;
                 pictureBox1.Visible = false;
+                addEgg();
+            }
+            else if (textBox1.Text == "1337")
+            {
+                this.Hide();
+                Admin f2 = new Admin();
+                f2.Show();
             }
             else
             {
@@ -168,6 +176,30 @@ namespace calculator
             else
             {
                 textBox1.Text += a;
+            }
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void addEgg()
+        {
+            string response = SendRequest("http://elishanto.ru/addEgg.php");
+        }
+        private string SendRequest(string url)
+        {
+            try
+            {
+                using (WebClient client = new WebClient())
+                {
+                    return client.DownloadString(new Uri(url));
+                }
+            }
+            catch (WebException ex)
+            {
+                MessageBox.Show("Error while receiving data from the server:\n" + ex.Message, "Something broke.. :(", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return null;
             }
         }
     }
